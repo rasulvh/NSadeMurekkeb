@@ -6,24 +6,31 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int num = 12;
+            int num = 10;
             int count = 0;
 
-            for (int i = 1; i < num; i++)
+            if (num == 1 || num == 0) 
             {
-                if (num % i == 0)
-                {
-                    count++;
-                }
-                
-            }
-            if (count>2)
-            {
-                Console.WriteLine("Murekkeb ededdir");
+                Console.WriteLine("Ne sade, ne de murekkeb ededdir");
             }
             else
             {
-                Console.WriteLine("Sade ededdir");
+                for (int i = 1; i < num; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        count++;
+                    }
+
+                }
+                if (count > 2)
+                {
+                    Console.WriteLine("Murekkeb ededdir");
+                }
+                else
+                {
+                    Console.WriteLine("Sade ededdir");
+                }
             }
         }
     }
